@@ -106,7 +106,9 @@ const beers = [
     "ibu": "50",
     "description": "De cuerpo intenso y color ámbar oscuro, esta Barleywine despliega notas de toffee, caramelo profundo, fruta seca, jerez y coñac. La pimienta de canelo aparece como una capa cálida y especiada, con un picor elegante y sutil que acompaña la fuerza alcohólica de la cerveza y le entrega un giro austral, profundo y persistente.",
     "pairing": "Marida con platos intensos, quesos fuertes, carnes ahumadas, cordero, postres de chocolate amargo o frutos secos. También puede disfrutarse sola, como una cerveza ceremonial, lenta y de carácter.",
-    "source": "Portafolio Indomable · versión de trabajo"
+    "source": "Portafolio Indomable · versión de trabajo",
+    "image": "assets/beers/indomable-mocha-dick-canelo-austral.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Carmela",
@@ -178,7 +180,9 @@ const beers = [
     "ibu": "20",
     "description": "En boca conserva el carácter de una Tripel belga: dorada, intensa, seca, especiada y peligrosamente tomable. La miel de ulmo no busca volverla dulce, sino aportar una capa floral y melosa que complementa los ésteres y fenoles propios de la fermentación belga. El resultado es una cerveza luminosa y aromática, con alcohol limpio, especias suaves, cuerpo medio y un final seco que invita al siguiente sorbo.",
     "pairing": "Combina muy bien con quesos cremosos, pizzas blancas, pastas con salsas suaves, pollo especiado, pescados grasos, preparaciones con miel o mostaza, y postres de fruta. También funciona como cerveza de sobremesa, especialmente cuando se busca una experiencia floral, intensa y elegante.",
-    "source": "Portafolio Indomable · versión de trabajo"
+    "source": "Portafolio Indomable · versión de trabajo",
+    "image": "assets/beers/indomable-san-sebastian-ulmo-de-la-araucania.png",
+    "imageLayout": "mockup"
   },
   {
     "name": "Ira",
