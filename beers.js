@@ -12,7 +12,9 @@ const beers = [
     "source": "Portafolio Indomable · versión de trabajo",
     "awards": [
       "Copa Interregional Río Maule (Chile, 2025): Plata - Chiflón del Diablo"
-    ]
+    ],
+    "image": "assets/beers/indomable-chiflon-del-diablo.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Tres Pascualas",
@@ -21,7 +23,9 @@ const beers = [
     "alcohol": "—",
     "ibu": "—",
     "description": "",
-    "source": "Selección confirmada por el usuario; ficha técnica pendiente"
+    "source": "Selección confirmada por el usuario; ficha técnica pendiente",
+    "image": "assets/beers/indomable-tres-pascualas.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Chorero Porter",
@@ -37,7 +41,9 @@ const beers = [
       "Copa Chilanga (México, 2023): Bronce - Chorero Porter",
       "Copa Desafío Conquistadores (Chile, 2025): Bronce - Chorero Porter",
       "Copa Interregional Río Maule (Chile, 2025): Bronce - Chorero Porter"
-    ]
+    ],
+    "image": "assets/beers/indomable-chorero-porter.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Rey de la Araucanía",
@@ -54,7 +60,9 @@ const beers = [
       "Copa Chilanga (México, 2023): Plata - Rey de la Araucanía",
       "Copa Capital Cervecera (Chile, 2025): Bronce - Rey de la Araucanía",
       "Copa Desafío Conquistadores (Chile, 2025): Oro - Rey de la Araucanía"
-    ]
+    ],
+    "image": "assets/beers/indomable-rey-de-la-araucania.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Llacolén",
@@ -71,7 +79,9 @@ const beers = [
       "Copa de Cervezas de América - Etapa Nacional (Chile, 2022): Bronce - Llacolén",
       "Copa Guaraní de Cervezas (Paraguay, 2023): Plata - Llacolén y San Sebastián",
       "World Beer Awards (Chile, 2024): Silver - Llacolén"
-    ]
+    ],
+    "image": "assets/beers/indomable-llacolen.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Mocha Dick - Barleywine",
@@ -83,7 +93,9 @@ const beers = [
     "description": "Tributo a la fortaleza de la verdadera ballena blanca que habitó al sur de Chile, frente a Isla Mocha, y que inspiró la historia de Moby Dick.\n\nCerveza intensa, de color ámbar oscuro, gran cuerpo, alta maltosidad y alcohol. Su complejidad recuerda al jerez y al coñac.\n\nEs una cerveza que nos define: representa la rudeza y robustez de la ballena, de la naturaleza y de todo aquello que permanece indomable.",
     "pairing": "Ideal para combinar con platos intensos, quesos fuertes o bien como bajativo.",
     "source": "Portafolio Indomable · versión de trabajo",
-    "awards": []
+    "awards": [],
+    "image": "assets/beers/indomable-mocha-dick-barleywine.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Mocha Dick - Canelo Austral",
@@ -108,7 +120,9 @@ const beers = [
     "source": "Portafolio Indomable · versión de trabajo",
     "awards": [
       "Copa Cervecera Independiente (Chile, 2026): Oro - Carmela"
-    ]
+    ],
+    "image": "assets/beers/indomable-carmela.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Nonguén",
@@ -120,7 +134,9 @@ const beers = [
     "description": "En 1995, la comunidad de Concepción decidió proteger y conservar el Fundo Nonguén. Celebramos esa decisión y disfrutamos nuestra reserva.\n\nEsta es una cerveza compleja, con capas armónicas de frutos secos y café, final cálido y alcohólico, adición de chancaca y maceración con café en grano.\n\nEs una cerveza que celebra el buen trabajo: ese momento en que terminamos una jornada y reflexionamos sobre aquello que hicimos con orgullo, como decidir proteger nuestro hábitat. Ese momento lo celebramos con una Nonguén.",
     "pairing": "Marida con platos fuertes, quesos maduros, carnes a las brasas, postres de café y chocolate.",
     "source": "Portafolio Indomable · versión de trabajo",
-    "awards": []
+    "awards": [],
+    "image": "assets/beers/indomable-nonguen.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "San Sebastián - Belgian Tripel",
@@ -149,7 +165,9 @@ const beers = [
     "alcohol": "—",
     "ibu": "—",
     "description": "",
-    "source": "Selección confirmada por el usuario; ficha técnica pendiente"
+    "source": "Selección confirmada por el usuario; ficha técnica pendiente",
+    "image": "assets/beers/indomable-berry-red-ale.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "San Sebastián - Ulmo de la Araucanía",
@@ -176,7 +194,9 @@ const beers = [
       "Medalla de Plata en Copa Internacional de Fermentados (Noviembre 2023)"
     ],
     "format": "470 cc",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-ira.webp",
+    "imageLayout": "photograph"
   },
   {
     "name": "Gula",
@@ -194,7 +214,9 @@ const beers = [
       "Medalla de Plata en World Beer Award Inglaterra (Agosto 2024)"
     ],
     "format": "470 cc",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-gula.webp",
+    "imageLayout": "photograph"
   },
   {
     "name": "Avaricia",
@@ -214,7 +236,9 @@ const beers = [
       "Medalla de Bronce en Copa Desafío Conquistadores (Agosto 2024)"
     ],
     "format": "470 cc",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-avaricia.webp",
+    "imageLayout": "photograph"
   },
   {
     "name": "Lujuria",
@@ -233,7 +257,9 @@ const beers = [
       "Medalla de Bronce en Copa Desafío Conquistadores (Agosto 2023)"
     ],
     "format": "470 cc",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-lujuria.webp",
+    "imageLayout": "photograph"
   },
   {
     "name": "Soberbia",
@@ -251,7 +277,9 @@ const beers = [
       "Medalla de Plata en World Beer Award Inglaterra (Agosto 2026)"
     ],
     "format": "470 cc",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-soberbia.webp",
+    "imageLayout": "photograph"
   },
   {
     "name": "Pereza",
@@ -268,7 +296,9 @@ const beers = [
       "Medalla de Oro Mejor Hazy IPA chilena World Beer Award (Agosto 2024)"
     ],
     "format": "470 cc",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-pereza.webp",
+    "imageLayout": "photograph"
   },
   {
     "name": "Envidia",
@@ -285,7 +315,9 @@ const beers = [
       "Medalla de Plata en World Beer Award Inglaterra (Agosto 2024)"
     ],
     "format": "470 cc",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-envidia.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Reincidente",
@@ -304,7 +336,9 @@ const beers = [
       "Medalla de Oro en Copa Guaraní de Cervezas (Agosto 2023)"
     ],
     "format": "",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-reincidente.webp",
+    "imageLayout": "mockup"
   },
   {
     "name": "Don Francisco",
@@ -339,6 +373,8 @@ const beers = [
       "Medalla de Oro Mejor Hazy IPA chilena World Beer Award (Agosto 2026)"
     ],
     "format": "",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-papaya-asesina.webp",
+    "imageLayout": "mockup"
   }
 ];
