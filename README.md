@@ -19,3 +19,7 @@ Incluye las cuatro referencias detalladas en el PDF: Chiflón del Diablo, Pereza
 Los datos se mantienen en `script.js`. Filtros por marca, búsqueda sin distinción de acentos, fichas modales y menú móvil implementados. Las fichas y denominaciones están sujetas a validación comercial.
 
 Validación realizada en Chromium: filtros, búsqueda, estado sin resultados, apertura de ficha, cierre con Escape, menú móvil, imágenes y ausencia de desbordamiento horizontal a 390, 768 y 1280 píxeles.
+
+## Tipografía
+
+Tinos es la tipografía principal, con pesos 400 y 700 en normal y cursiva, alojada en `assets/fonts/` para evitar dependencias externas al cargar. Arial se mantiene para navegación y etiquetas auxiliares. La licencia se incluye en `assets/fonts/OFL.txt`.
