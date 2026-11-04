@@ -14,9 +14,9 @@ También puede ejecutarse `python3 -m http.server 3000 --bind 0.0.0.0`. El direc
 
 ## Catálogo y pendientes
 
-Incluye 23 referencias: 11 de Indomable y 12 de Crápula, transcritas del portafolio DOCX de Indomable (versión de trabajo) y la presentación PDF de Crápula de agosto de 2026. El total anterior de 25 se sustituyó por el número documentado. Tres Pascualas no aparece en el portafolio actual y no se incluye.
+Incluye la selección confirmada por el usuario: 12 referencias de Indomable y 10 de Crápula (22 en total). Las dos menciones de Tres Pascualas se interpretan como una sola West Coast IPA. Se agregaron Tres Pascualas y Berry Red Ale (sabor calafate); se retiraron Callejones, Melendez y Dark Lager con Avellanas de esta selección. Los datos técnicos existentes provienen del portafolio DOCX de Indomable y del PDF de Crápula de agosto de 2026.
 
-Los datos se mantienen en `beers.js`: estilo, alcohol e IBU, descripción, maridaje, datos sensoriales y reconocimientos cuando están informados en las fichas. Carmela y Callejones no tienen IBU informado. Las dos denominaciones especiales de Indomable son provisionales según el documento de trabajo. No se infiere disponibilidad comercial a partir de la inclusión en el catálogo. Las fotografías de estos portafolios no se extrajeron ni se incorporaron: se conservan los espacios de imagen pendiente.
+Los datos se mantienen en `beers.js`: estilo, alcohol e IBU, descripción, maridaje, datos sensoriales y reconocimientos cuando están informados en las fichas. Carmela no tiene IBU informado. Tres Pascualas y Berry Red Ale tienen descripción, alcohol e IBU pendientes; no se infieren esos valores. Las dos denominaciones especiales de Indomable son provisionales según el documento de trabajo. No se infiere disponibilidad comercial a partir de la inclusión en el catálogo. Las fotografías de estos portafolios no se extrajeron ni se incorporaron: se conservan los espacios de imagen pendiente.
 
 `script.js` implementa filtros por marca, búsqueda sin distinción de acentos, fichas modales y menú móvil. El contacto de la distribuidora continúa pendiente; el contacto de una cervecería no se reutiliza como contacto de distribución.
 
