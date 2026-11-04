@@ -58,3 +58,7 @@ nav,.mobile-header,.distributor,.sidebar-bottom,.kicker,.stamp,.outlined,.coordi
 .world::before{content:'';position:absolute;inset:-64px;z-index:-2;background:url('assets/forest.webp') center 48%/cover no-repeat;opacity:.14;pointer-events:none;transform:translate3d(var(--world-x,0px),calc(var(--world-scroll,0px) + var(--world-y,0px)),0);transition:transform .35s ease-out}
 .world::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,#f2efe72b,#f2efe78c);pointer-events:none}
 @media(prefers-reduced-motion:reduce){.world::before{transform:none;transition:none}}
+
+.contact-links{display:grid;gap:12px;margin-top:28px}.contact-email{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;border:1px solid #aaa99b;padding:18px 20px;background:#15151426;transition:background-color .25s ease,border-color .25s ease,transform .25s var(--ease-out)}.contact-email small{grid-column:1/-1;font:700 9px Arial,sans-serif;letter-spacing:2px}.contact-email span{font-size:21px;overflow-wrap:anywhere}.contact-email .arrow{align-self:center;transition:transform .25s var(--ease-out)}.contact-email:focus-visible{outline-color:#b9d4dd;background:#304f59}
+@media(hover:hover){.contact-email:hover{background:#304f59;border-color:#b9d4dd;transform:translateY(-2px)}.contact-email:hover .arrow{transform:translate(3px,-3px)}}
+@media(prefers-reduced-motion:reduce){.contact-email:hover,.contact-email:hover .arrow{transform:none}}

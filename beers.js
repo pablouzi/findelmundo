@@ -158,7 +158,9 @@ const beers = [
       "World Beer Awards (Chile, 2024): Gold - San Sebastián",
       "Copa Cervecera Independiente (Chile, 2025): Plata - San Sebastián",
       "Copa Desafío Conquistadores (Chile, 2025): Bronce - San Sebastián"
-    ]
+    ],
+    "image": "assets/beers/indomable-san-sebastian-belgian-tripel.jpeg",
+    "imageLayout": "photograph"
   },
   {
     "name": "Berry Red Ale",
@@ -359,7 +361,9 @@ const beers = [
       "Medalla de Plata en Copa Desafío Conquistadores (Agosto 2023)"
     ],
     "format": "",
-    "source": "Presentación Crápula · agosto 2026"
+    "source": "Presentación Crápula · agosto 2026",
+    "image": "assets/beers/crapula-don-francisco.jpeg",
+    "imageLayout": "photograph"
   },
   {
     "name": "Papaya Asesina",
