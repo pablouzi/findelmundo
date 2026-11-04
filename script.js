@@ -49,3 +49,43 @@ function renderDetails(beer){
  if(beer.awards?.length){const heading=document.createElement('h3');heading.textContent='Reconocimientos';const list=document.createElement('ul');for(const award of beer.awards){const item=document.createElement('li');item.textContent=award;list.append(item)}details.append(heading,list)}
  if(beer.category==='Edición especial'){const note=document.createElement('p');note.className='catalog-note';note.textContent='Denominación provisional del portafolio de trabajo.';details.append(note)}
 }
+
+// Move only the decorative layer; text stays still and readable.
+(function setupStoryParallax(){
+ const section=document.querySelector('#mundo');
+ const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+ if(!section || !('IntersectionObserver' in window)) return;
+ let visible=false,frame=0,pointerX=0,pointerY=0;
+ function update(){
+  frame=0;
+  if(!visible || motion.matches) return;
+  const rect=section.getBoundingClientRect();
+  const progress=(innerHeight/2-(rect.top+rect.height/2))/((innerHeight+rect.height)/2);
+  section.style.setProperty('--world-scroll',`${Math.max(-32,Math.min(32,progress*32))}px`);
+  section.style.setProperty('--world-x',`${pointerX}px`);
+  section.style.setProperty('--world-y',`${pointerY}px`);
+ }
+ function schedule(){if(visible && !motion.matches && !frame) frame=requestAnimationFrame(update)}
+ function reset(){
+  if(frame)cancelAnimationFrame(frame);
+  frame=0;pointerX=0;pointerY=0;
+  for(const property of ['--world-scroll','--world-x','--world-y'])section.style.removeProperty(property);
+ }
+ function sync(){
+  window.removeEventListener('scroll',schedule);
+  if(visible && !motion.matches){window.addEventListener('scroll',schedule,{passive:true});schedule()}
+  else reset();
+ }
+ const visibility=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync()});
+ visibility.observe(section);
+ section.addEventListener('pointermove',event=>{
+  if(motion.matches || event.pointerType!=='mouse')return;
+  const rect=section.getBoundingClientRect();
+  pointerX=((event.clientX-rect.left)/rect.width-.5)*-20;
+  pointerY=((event.clientY-rect.top)/rect.height-.5)*-14;
+  schedule();
+ });
+ section.addEventListener('pointerleave',()=>{pointerX=0;pointerY=0;schedule()});
+ window.addEventListener('resize',schedule,{passive:true});
+ motion.addEventListener('change',sync);
+})();

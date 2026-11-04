@@ -49,3 +49,12 @@ nav,.mobile-header,.distributor,.sidebar-bottom,.kicker,.stamp,.outlined,.coordi
  aside.open{animation:menu-enter .25s var(--ease-out)}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.beer-card:hover,.photo:hover>div,nav a:hover,.outlined:hover,.filters button:hover,.sidebar-bottom>a:hover{transform:none}.beer-card:hover .product-photo{scale:1}}
+
+/* Solid primary action and atmospheric background for our story. */
+.map-panel .outlined{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 4px 14px #15151424}
+@media(hover:hover){.map-panel .outlined:hover{background:#203c46;border-color:#203c46;box-shadow:0 8px 22px #15151433}}
+.map-panel .outlined:focus-visible{background:#203c46;outline-color:#1c3d48;outline-offset:5px}
+.world{position:relative;isolation:isolate;overflow:hidden;background:var(--paper)}
+.world::before{content:'';position:absolute;inset:-64px;z-index:-2;background:url('assets/forest.webp') center 48%/cover no-repeat;opacity:.14;pointer-events:none;transform:translate3d(var(--world-x,0px),calc(var(--world-scroll,0px) + var(--world-y,0px)),0);transition:transform .35s ease-out}
+.world::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,#f2efe72b,#f2efe78c);pointer-events:none}
+@media(prefers-reduced-motion:reduce){.world::before{transform:none;transition:none}}
