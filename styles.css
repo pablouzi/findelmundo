@@ -15,3 +15,37 @@ nav,.mobile-header,.distributor,.sidebar-bottom,.kicker,.stamp,.outlined,.coordi
 #dialog-description{white-space:pre-line}.beer-details h3{font:700 11px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;margin:22px 0 8px}.beer-details p,.beer-details li{font-size:15px;line-height:1.6}.beer-details p{margin-bottom:12px}.beer-details ul{padding-left:20px}.beer-details li{margin-bottom:8px}.stats strong{font-size:28px}
 
 .beer-image.has-photo,.beer-card.crapula .beer-image.has-photo{background:#f8f7f2;overflow:hidden}.beer-image.has-photo .beer-number,.beer-image.has-photo .beer-code{z-index:1;background:#f8f7f2db;padding:4px}.product-photo{display:block;width:100%;height:100%;object-fit:contain}.beer-image.mockup .product-photo{position:absolute;left:50%;top:50%;height:118%;width:auto;max-width:none;transform:translate(-50%,-50%);clip-path:inset(11% 33.7% 8% 33%)}.dialog-photo{position:relative;height:300px;background:#f8f7f2;overflow:hidden;margin-bottom:25px}.dialog-photo[hidden]{display:none}.dialog-photo img{display:block;width:100%;height:100%;object-fit:contain}.dialog-photo.mockup img{position:absolute;left:50%;top:50%;height:118%;width:auto;max-width:none;transform:translate(-50%,-50%);clip-path:inset(11% 33.7% 8% 33%)}
+
+/* Interaction feedback */
+:root{--ease-out:cubic-bezier(.22,1,.36,1)}
+.outlined,.filters button,.beer-open,nav a,.sidebar-bottom>a,footer a,.dialog-close,#menu-toggle{transition:background-color .22s ease,color .22s ease,border-color .22s ease,box-shadow .22s ease,transform .25s var(--ease-out)}
+.outlined{display:inline-flex;align-items:center;justify-content:center;gap:18px}.outlined span{margin-left:0}.outlined .arrow,.beer-open .arrow,.tile-arrow,.sidebar-bottom>a,.compass img{transition:transform .35s var(--ease-out)}
+.beer-card{transition:transform .35s var(--ease-out),box-shadow .35s ease,border-color .25s ease}.beer-image .product-photo{transition:scale .5s var(--ease-out)}
+.photo>div{transition:transform .5s var(--ease-out)}.photo:before{transition:background .4s ease}
+.search{transition:border-color .2s ease,box-shadow .2s ease}.search:focus-within{border-color:var(--blue);box-shadow:0 2px 0 var(--blue)}
+.dialog-close,#menu-toggle{display:grid;place-items:center;min-width:38px;min-height:38px;border-radius:50%}
+.filters button:active,.outlined:active,.beer-open:active,#menu-toggle:active,.dialog-close:active{transform:scale(.97)}
+.beer-open:focus-visible,.outlined:focus-visible{background:var(--blue);color:#fff}.beer-card:focus-within{border-color:var(--blue);box-shadow:0 6px 20px #15151412}
+@media(hover:hover){
+ .outlined:hover{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 6px 18px #1515141c;transform:translateY(-2px)}
+ .outlined:hover .arrow,.beer-open:hover .arrow{transform:translate(3px,-3px)}
+ .filters button:hover{border-color:var(--blue);background:#304f5914;transform:translateY(-2px)}.filters button.selected:hover{background:#243e47;color:#fff}
+ nav a:hover{transform:translateX(3px)}
+ .sidebar-bottom>a:hover,footer a:hover{color:#b9d4dd;border-color:#b9d4dd}.sidebar-bottom>a:hover{transform:translateY(-2px)}
+ .sidebar-bottom:hover .compass img{transform:rotate(45deg)}
+ .beer-card:hover{transform:translateY(-5px);box-shadow:0 14px 28px #15151416;border-color:#8a978e}
+ .beer-card:hover .product-photo{scale:1.045}
+ .photo:hover>div{transform:translateY(-5px)}.photo:hover .tile-arrow{transform:translate(4px,-4px)}
+ .dialog-close:hover,#menu-toggle:hover{background:#304f591c;color:var(--blue)}.mobile-header #menu-toggle:hover{background:#ffffff1a;color:#fff}
+}
+@keyframes section-enter{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes dialog-enter{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes backdrop-enter{from{background-color:#0000}to{background-color:#0009}}
+@keyframes menu-enter{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:translateX(0)}}
+@media(prefers-reduced-motion:no-preference){
+ .reveal.is-visible{animation:section-enter .65s var(--ease-out) backwards;animation-delay:var(--reveal-delay,0ms)}
+ .map-panel .welcome,.map-panel h1,.map-panel .hero-description,.map-panel .outlined{animation:section-enter .8s var(--ease-out) backwards}.map-panel h1{animation-delay:90ms}.map-panel .hero-description{animation-delay:180ms}.map-panel .outlined{animation-delay:260ms}
+ dialog[open]{animation:dialog-enter .28s var(--ease-out)}dialog[open]::backdrop{animation:backdrop-enter .28s ease}
+ aside.open{animation:menu-enter .25s var(--ease-out)}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.beer-card:hover,.photo:hover>div,nav a:hover,.outlined:hover,.filters button:hover,.sidebar-bottom>a:hover{transform:none}.beer-card:hover .product-photo{scale:1}}

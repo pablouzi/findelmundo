@@ -1,12 +1,31 @@
+// Reveal only on entry; content stays visible if motion or observers are unavailable.
+const revealObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+ for (const entry of entries) {
+  if (!entry.isIntersecting) continue;
+  entry.target.classList.add('is-visible');
+  revealObserver.unobserve(entry.target);
+ }
+}, {threshold: 0.08}) : null;
+function observeReveals(){
+ if (!revealObserver || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ document.querySelectorAll('.section > .section-label, .section-heading, .world-grid, .contact-grid, .brand-card, .beer-card').forEach((element, index) => {
+  if (element.classList.contains('reveal')) return;
+  element.classList.add('reveal');
+  if (element.classList.contains('beer-card')) element.style.setProperty('--reveal-delay', `${index % 4 * 55}ms`);
+  revealObserver.observe(element);
+ });
+}
 let filter='Todas';
 const grid=document.querySelector('#beer-grid');
 const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 function render(){
+ if (revealObserver) grid.querySelectorAll('.reveal:not(.is-visible)').forEach(element => revealObserver.unobserve(element));
  const query=normalize(document.querySelector('#search').value.trim());
  const shown=beers.filter(b=>(filter==='Todas'||b.brand===filter)&&normalize(b.name+' '+b.style+' '+b.brand).includes(query));
  document.querySelector('#result-count').textContent=`${shown.length} REFERENCIAS EN ESTA VISTA · ${beers.length} EN EL CATÁLOGO`;
  grid.innerHTML=shown.length?shown.map(b=>{const i=beers.indexOf(b);return `<article class="beer-card ${b.brand==='Crápula'?'crapula':''}"><div class="beer-image ${b.image?'has-photo '+b.imageLayout:''}"><span class="beer-number">N° ${String(i+1).padStart(2,'0')}</span><span class="beer-code">${b.brand==='Crápula'?'CR':'IN'} / SUR</span>${b.image?`<img class="product-photo" src="${b.image}" alt="${b.brand} ${b.name}, presentación en lata" loading="lazy" decoding="async">`:`<div class="placeholder"><em>Próximamente</em><small>IMAGEN DE ENVASE<br>PENDIENTE</small></div>`}</div><div class="beer-info"><p class="beer-brand">${b.brand.toUpperCase()}</p><h3>${b.name.toUpperCase()}</h3><div class="beer-meta"><span>ALC. ${b.alcohol==='—'?'No informado':b.alcohol}</span><span>IBU ${b.ibu==='—'?'No informado':b.ibu}</span></div></div><button class="beer-open" data-beer="${i}" aria-label="Explorar ficha de ${b.name}">EXPLORAR FICHA <span aria-hidden="true"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button></article>`}).join(''):'<p class="empty">No encontramos cervezas con esa búsqueda. Prueba otro nombre o estilo.</p>';
  document.querySelectorAll('[data-filter]').forEach(b=>{const active=b.dataset.filter===filter;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',String(active))});
+ observeReveals();
 }
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;render()}));
 document.querySelector('#search').addEventListener('input',render);
