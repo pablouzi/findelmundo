@@ -11,3 +11,5 @@
 nav,.mobile-header,.distributor,.sidebar-bottom,.kicker,.stamp,.outlined,.coordinates,.tile-label,.manifesto,.section-label,.section-heading>p,.catalog-tools,.result-count,.beer-number,.beer-code,.placeholder small,.beer-brand,.beer-meta,.beer-open,.catalog-note,.contact-info>span,footer,.stats small,.dialog-close{font-family:Arial,sans-serif}
 
 .compass img{display:block;width:49px;height:49px}
+
+#dialog-description{white-space:pre-line}.beer-details h3{font:700 11px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;margin:22px 0 8px}.beer-details p,.beer-details li{font-size:15px;line-height:1.6}.beer-details p{margin-bottom:12px}.beer-details ul{padding-left:20px}.beer-details li{margin-bottom:8px}.stats strong{font-size:28px}
