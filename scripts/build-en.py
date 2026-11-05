@@ -39,7 +39,7 @@ output = root / 'dist'
 if output.exists():
     shutil.rmtree(output)
 output.mkdir()
-for filename in ['index.html', 'styles.css', 'script.js', 'beers.js']:
+for filename in ['index.html', 'styles.css', 'script.js', 'beers.js', 'favicon.ico']:
     shutil.copy2(root / filename, output / filename)
 for directory in ['assets', 'en']:
     shutil.copytree(root / directory, output / directory)
