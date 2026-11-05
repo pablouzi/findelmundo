@@ -39,3 +39,9 @@ Español en `/` e inglés en `/en/`. El selector ES / EN conserva la sección ac
 Después de modificar la estructura o textos de `index.html`, actualizar las traducciones y ejecutar `npm run build`. El generador falla si el texto fuente de una traducción cambió. No se necesitan dependencias de npm. `npm test` verifica integridad de traducciones y catálogo.
 
 Ambas páginas incluyen `lang` y enlaces alternativos `hreflang`. Cuando se conozca el dominio de publicación, ejecutar `SITE_URL=https://dominio-real/ npm run build` (incluyendo el subdirectorio si corresponde) para generar los enlaces alternativos absolutos que requieren los buscadores. Sin ese dato se conservan enlaces relativos funcionales. No se inventa un dominio ni se publican versiones automáticamente.
+
+## Cloudflare Workers
+
+`wrangler.json` configura el sitio como assets estáticos desde `dist/` e incluye el bloque `previews` que requiere el comando de previsualización. El build de Wrangler ejecuta `npm run build`, que genera el inglés y empaqueta solo los archivos públicos (sin pruebas, scripts internos ni documentación).
+
+En Workers Builds, usar `npx wrangler deploy` como comando de despliegue de producción. Si se necesita una previsualización, usar `npx wrangler preview`. El nombre configurado es `cervezasdelfindelmundo`; debe coincidir con el proyecto vinculado. No se incluyen credenciales en el repositorio.

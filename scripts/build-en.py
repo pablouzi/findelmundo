@@ -32,3 +32,17 @@ if site_url:
     (root / 'index.html').write_text(source)
 (root / 'en').mkdir(exist_ok=True)
 (root / 'en/index.html').write_text(english)
+
+# Package only the public site for Cloudflare static assets.
+import shutil
+output = root / 'dist'
+if output.exists():
+    shutil.rmtree(output)
+output.mkdir()
+for filename in ['index.html', 'styles.css', 'script.js', 'beers.js']:
+    shutil.copy2(root / filename, output / filename)
+for directory in ['assets', 'en']:
+    shutil.copytree(root / directory, output / directory)
+(output / 'locales').mkdir()
+for filename in ['i18n.js', 'en-beers.js']:
+    shutil.copy2(root / 'locales' / filename, output / 'locales' / filename)

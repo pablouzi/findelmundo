@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cervezasdelfindelmundo",
+  "compatibility_date": "2026-11-05",
+  "build": {
+    "command": "npm run build"
+  },
+  "assets": {
+    "directory": "./dist"
+  },
+  "previews": {}
+}
