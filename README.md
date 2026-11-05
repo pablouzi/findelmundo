@@ -25,3 +25,17 @@ Validación realizada en Chromium: filtros, búsqueda, estado sin resultados, ap
 ## Tipografía
 
 Tinos es la tipografía principal, con pesos 400 y 700 en normal y cursiva, alojada en `assets/fonts/` para evitar dependencias externas al cargar. Arial se mantiene para navegación y etiquetas auxiliares. La licencia se incluye en `assets/fonts/OFL.txt`.
+
+## Idiomas
+
+Español en `/` e inglés en `/en/`. El selector ES / EN conserva la sección actual; no se redirige automáticamente por idioma del navegador. Las dos páginas usan las mismas fotos, fuentes, estilos y funciones. Los nombres de cerveza y marca se conservan; las fichas en inglés mantienen las medidas de la fuente original y usan punto decimal.
+
+- `index.html`: contenido y estructura en español.
+- `locales/en-page.json`: traducción de los textos estáticos.
+- `locales/en-beers.js`: traducciones de descripciones y notas sensoriales, asociadas por nombre de cerveza.
+- `locales/i18n.js`: etiquetas de interfaz y adaptación del catálogo compartido.
+- `en/index.html`: página inglesa generada. No editar directamente.
+
+Después de modificar la estructura o textos de `index.html`, actualizar las traducciones y ejecutar `npm run build`. El generador falla si el texto fuente de una traducción cambió. No se necesitan dependencias de npm. `npm test` verifica integridad de traducciones y catálogo.
+
+Ambas páginas incluyen `lang` y enlaces alternativos `hreflang`. Cuando se conozca el dominio de publicación, ejecutar `SITE_URL=https://dominio-real/ npm run build` (incluyendo el subdirectorio si corresponde) para generar los enlaces alternativos absolutos que requieren los buscadores. Sin ese dato se conservan enlaces relativos funcionales. No se inventa un dominio ni se publican versiones automáticamente.

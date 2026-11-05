@@ -83,3 +83,17 @@ button.dialog-photo::after{content:'Ampliar foto +';position:absolute;right:12px
 .beer-open::after{content:'';position:absolute;inset:0;z-index:2;cursor:pointer}
 .beer-open:active{transform:none}
 .beer-open:focus-visible::after{outline:3px solid #8bb6c5;outline-offset:3px}
+
+/* Language choices use ordinary links and work without JavaScript. */
+.language-switch{display:flex;justify-content:center;align-items:center;gap:4px;font:700 10px Arial,sans-serif;letter-spacing:1px}
+.language-switch a{display:grid;place-items:center;min-width:36px;min-height:32px;border:1px solid #777a70;color:inherit;transition:background-color .2s ease,border-color .2s ease}
+.language-switch a[aria-current="page"]{background:var(--blue);border-color:var(--blue);color:white}
+#sidebar>.language-switch{margin:-10px 0 20px}
+.mobile-header .language-switch{margin-left:auto;margin-right:12px;gap:3px}
+.mobile-header .language-switch a{min-width:30px;min-height:32px;font-size:9px}
+@media(hover:hover){.language-switch a:hover{background:#456571;color:#fff;border-color:#8bb6c5}}
+button.dialog-photo::after{content:attr(data-expand-label) ' +'}
+@media(max-width:600px){.mobile-header{padding-inline:5%;gap:8px}.mobile-header>a{max-width:52%;font-size:10px;letter-spacing:.5px}.mobile-header small{font-size:6px;letter-spacing:.5px}.mobile-header .language-switch{margin-right:0}.mobile-header #menu-toggle{flex-shrink:0}html[lang="en"] .hero-tiles .snow h2{font-size:35px}html[lang="en"] .world-grid h2{font-size:53px}html[lang="en"] .contact h2{font-size:57px}}
+.beer-info h3{overflow-wrap:anywhere}
+@media(max-width:600px){.brand-card h3{font-size:clamp(28px,8vw,42px)}html[lang="en"] .contact h2{font-size:clamp(42px,12.5vw,57px)}}
+@media(max-width:360px){.hero-tiles h2{font-size:23px}}
