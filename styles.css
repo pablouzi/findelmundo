@@ -62,3 +62,18 @@ nav,.mobile-header,.distributor,.sidebar-bottom,.kicker,.stamp,.outlined,.coordi
 .contact-links{display:grid;gap:12px;margin-top:28px}.contact-email{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;border:1px solid #aaa99b;padding:18px 20px;background:#15151426;transition:background-color .25s ease,border-color .25s ease,transform .25s var(--ease-out)}.contact-email small{grid-column:1/-1;font:700 9px Arial,sans-serif;letter-spacing:2px}.contact-email span{font-size:21px;overflow-wrap:anywhere}.contact-email .arrow{align-self:center;transition:transform .25s var(--ease-out)}.contact-email:focus-visible{outline-color:#b9d4dd;background:#304f59}
 @media(hover:hover){.contact-email:hover{background:#304f59;border-color:#b9d4dd;transform:translateY(-2px)}.contact-email:hover .arrow{transform:translate(3px,-3px)}}
 @media(prefers-reduced-motion:reduce){.contact-email:hover,.contact-email:hover .arrow{transform:none}}
+
+/* Expand the product image without leaving the beer details. */
+button.dialog-photo{display:block;width:100%;padding:0;border:0;cursor:zoom-in}
+button.dialog-photo[hidden]{display:none}
+button.dialog-photo::after{content:'Ampliar foto +';position:absolute;right:12px;bottom:12px;background:#f2efe7ed;color:var(--black);padding:8px 12px;border:1px solid var(--line);font:10px Arial,sans-serif;letter-spacing:.6px;pointer-events:none;transition:background-color .2s ease,color .2s ease}
+@media(hover:hover){button.dialog-photo:hover::after{background:var(--blue);color:#fff}}
+.photo-viewer{width:min(1100px,94vw);max-width:94vw;max-height:96vh;max-height:96dvh;padding:48px 20px 16px;background:var(--paper);overflow:auto}
+.photo-viewer::backdrop{background:#000d;backdrop-filter:blur(6px)}
+.photo-stage{position:relative;height:min(780px,calc(100vh - 150px));height:min(780px,calc(100dvh - 150px));min-height:160px;overflow:hidden;background:#f8f7f2}
+.photo-stage img{display:block;width:100%;height:100%;object-fit:contain}
+.photo-stage.mockup img{position:absolute;left:50%;top:50%;height:118%;width:auto;max-width:none;transform:translate(-50%,-50%);clip-path:inset(11% 33.7% 8% 33%)}
+#photo-caption{font:12px/1.5 Arial,sans-serif;text-align:center;margin:12px 0 0}
+.photo-viewer-close{min-width:44px;min-height:44px;top:2px;right:6px}
+@media(max-width:600px){.photo-viewer{padding:48px 10px 12px}.photo-stage{height:calc(100vh - 165px);height:calc(100dvh - 165px)}}
+@media(max-width:600px){.photo-stage.photograph img{object-fit:cover}}

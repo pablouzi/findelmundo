@@ -89,3 +89,27 @@ function renderDetails(beer){
  window.addEventListener('resize',schedule,{passive:true});
  motion.addEventListener('change',sync);
 })();
+
+// A second native dialog keeps the beer details open underneath the enlarged photo.
+const photoButton=document.querySelector('#dialog-photo');
+const photoViewer=document.querySelector('#photo-viewer');
+const photoStage=document.querySelector('#photo-stage');
+photoButton.addEventListener('click',()=>{
+ const source=photoButton.querySelector('img');
+ if(!source)return;
+ const image=document.createElement('img');
+ image.src=source.src;
+ image.alt=source.alt;
+ photoStage.className='photo-stage '+(photoButton.classList.contains('mockup')?'mockup':'photograph');
+ photoStage.replaceChildren(image);
+ document.querySelector('#photo-caption').textContent=source.alt;
+ photoViewer.showModal();
+});
+document.querySelector('.photo-viewer-close').addEventListener('click',()=>photoViewer.close());
+photoViewer.addEventListener('click',event=>{
+ if(event.target!==photoViewer)return;
+ const rect=photoViewer.getBoundingClientRect();
+ if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)photoViewer.close();
+});
+photoViewer.addEventListener('close',()=>photoStage.replaceChildren());
+dialog.addEventListener('close',()=>{if(photoViewer.open)photoViewer.close()});
