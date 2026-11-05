@@ -77,3 +77,9 @@ button.dialog-photo::after{content:'Ampliar foto +';position:absolute;right:12px
 .photo-viewer-close{min-width:44px;min-height:44px;top:2px;right:6px}
 @media(max-width:600px){.photo-viewer{padding:48px 10px 12px}.photo-stage{height:calc(100vh - 165px);height:calc(100dvh - 165px)}}
 @media(max-width:600px){.photo-stage.photograph img{object-fit:cover}}
+
+/* Extend the existing native button across the card: one action and one tab stop. */
+.beer-card{position:relative}
+.beer-open::after{content:'';position:absolute;inset:0;z-index:2;cursor:pointer}
+.beer-open:active{transform:none}
+.beer-open:focus-visible::after{outline:3px solid #8bb6c5;outline-offset:3px}
